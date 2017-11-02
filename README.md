@@ -42,7 +42,7 @@ Usage
 The main functions you want to use in the sitemap module are
 
 ```javascript
-var sm = require('sitemap')
+var sm = require('@mipsot/sitemap')
 // Creates a sitemap object given the input configuration with URLs
 var sitemap = sm.createSitemap({ options });
 // Generates XML with a callback function
@@ -55,7 +55,7 @@ var xml = sitemap.toString();
 
 ```javascript
 var express = require('express')
-  , sm = require('sitemap');
+  , sm = require('@mipsot/sitemap');
 
 var app = express()
   , sitemap = sm.createSitemap ({
@@ -86,7 +86,7 @@ app.listen(3000);
 
 ```javascript
 var express = require('express')
-  , sm = require('sitemap');
+  , sm = require('@mipsot/sitemap');
 
 var app = express()
   , sitemap = sm.createSitemap ({
@@ -125,7 +125,7 @@ sitemap.del('/page-1/');
 ### Example of pre-generating sitemap based on existing static files:
 
 ```javascript
-var sm = require('sitemap')
+var sm = require('@mipsot/sitemap')
     , fs = require('fs');
 
 var sitemap = sm.createSitemap({
@@ -257,7 +257,7 @@ var sitemap = sm.createSitemap({
 ### Example of using HH:MM:SS in lastmod
 
 ```javascript
-var sm = require('sitemap')
+var sm = require('@mipsot/sitemap')
   , sitemap = sm.createSitemap({
       hostname: 'http://www.mywebsite.com',
       urls: [{
@@ -272,7 +272,7 @@ var sm = require('sitemap')
 ### Example of Sitemap Index as String
 
 ```javascript
-var sm = require('sitemap')
+var sm = require('@mipsot/sitemap')
   , smi = sm.buildSitemapIndex({
       urls: ['https://example.com/sitemap1.xml', 'https://example.com/sitemap2.xml']
       xslUrl: 'https://example.com/style.xsl' // optional
@@ -282,7 +282,7 @@ var sm = require('sitemap')
 ### Example of Sitemap Index
 
 ```javascript
-var sm = require('sitemap')
+var sm = require('@mipsot/sitemap')
   , smi = sm.createSitemapIndex({
       cacheTime: 600000,
       hostname: 'http://www.sitemap.org',
